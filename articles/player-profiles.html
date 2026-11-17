@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Who bats left, who bowls what — cricanalysis.in</title>
+  <meta name="description" content="Free ball-by-ball data tells you who scored the runs and who took the wickets. It doesn&#x27;t tell you whether a batter was left-handed or whether a bowler delivered left-arm spin. I&#x27;m slowly filling in those gaps.">
+  <link rel="canonical" href="https://get2abhijit.github.io/cricanalysis-website/articles/player-profiles.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="cricanalysis.in">
+  <meta property="og:title" content="Who bats left, who bowls what">
+  <meta property="og:description" content="Free ball-by-ball data tells you who scored the runs and who took the wickets. It doesn&#x27;t tell you whether a batter was left-handed or whether a bowler delivered left-arm spin. I&#x27;m slowly filling in those gaps.">
+  <meta property="og:url" content="https://get2abhijit.github.io/cricanalysis-website/articles/player-profiles.html">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#f6f4ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101814" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html" aria-label="cricanalysis.in, home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
+  <circle cx="32" cy="32" r="30" fill="#a8261d"/>
+  <path d="M19 6.5c7 14 7 37 0 51" fill="none" stroke="#f6f4ee" stroke-width="2.2" stroke-dasharray="3.2 2.6" stroke-linecap="round"/>
+  <path d="M45 6.5c-7 14-7 37 0 51" fill="none" stroke="#f6f4ee" stroke-width="2.2" stroke-dasharray="3.2 2.6" stroke-linecap="round"/>
+  <rect x="24.5" y="36" width="4" height="10" rx="1" fill="#f6f4ee"/>
+  <rect x="30" y="29" width="4" height="17" rx="1" fill="#f6f4ee"/>
+  <rect x="35.5" y="21" width="4" height="25" rx="1" fill="#f6f4ee"/>
+</svg>
+<span class="brand-name">cric<span>analysis</span></span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="../index.html">Home</a>
+        <a href="../articles/index.html" aria-current="page">Articles</a>
+        <a href="../about.html">About</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <div class="wrap">
+      <article>
+        <header class="article-head">
+          <p class="kicker">Data project</p>
+          <h1>Who bats left, who bowls what</h1>
+          <p class="standfirst">Free ball-by-ball data tells you who scored the runs and who took the wickets. It doesn't tell you whether a batter was left-handed or whether a bowler delivered left-arm spin. I'm slowly filling in those gaps.</p>
+          <div class="byline"><span>By <strong>Abhijit Deshpande</strong></span><span>November 2026</span><span>5 min read</span></div>
+          <p class="byline" style="border:0;padding:0">First published on Abhijit's personal site; lightly edited for cricanalysis.in. Player counts are as shown in the demo.</p>
+        </header>
+        <div class="prose">
+
+<p><a class="button" href="https://get2abhijit.github.io/cricket-player-profile-data/#overview" rel="noopener noreferrer">Open the Player Profiles demo <span aria-hidden="true">↗</span></a></p>
+
+<h2>A scorecard without hands</h2>
+<p><a href="https://cricsheet.org/" rel="noopener noreferrer">Cricsheet</a> is one of the best things to happen to cricket analysis: ball-by-ball data for thousands of matches, free, with every player given a stable ID. Much of what I do with cricket data starts there.</p>
+<p>What it doesn't carry is how a player plays. The register has names and IDs, not batting hands or bowling styles. For an analyst, that's only half the picture. How does a left-hander fare against off-spin? Does a top order struggle against left-arm pace? You can't ask either question until every ball knows whose hand and whose style were involved.</p>
+
+<h2>Why it matters to me</h2>
+<p>I've been involved in cricket in different capacities over the years, but much of my more recent involvement has been in associate cricket: playing, coaching and analysis in Germany. The big names are easy; their profiles are everywhere. The opening batter from Austria or the spinner from Rwanda is a different story, and those are exactly the players I increasingly find myself looking at.</p>
+<p>If the data doesn't know who bowls left-arm orthodox, the analysis starts with guesswork. I'd rather it started with the facts.</p>
+
+<h2>What it is</h2>
+<p>A player register that sits on top of Cricsheet. For each player in men's T20 internationals it records the batting hand, the bowling arm and style, and, where known, the playing role. Everything is keyed by the Cricsheet ID, so it lines up with the match data directly, and it can be downloaded as a spreadsheet.</p>
+
+<div class="table-wrap">
+<table>
+  
+  <thead><tr><th>Field</th><th>Values</th></tr></thead>
+  <tbody>
+    <tr><td>Batting hand</td><td><code>RHB</code>, <code>LHB</code></td></tr>
+    <tr><td>Bowling style</td><td>Pace: <code>R</code>/<code>L</code> + <code>F</code>, <code>FM</code>, <code>MF</code>, <code>M</code>, <code>SM</code> (e.g. <code>RFM</code>). Spin: <code>OB</code>, <code>LB</code>, <code>LBG</code>, <code>SLA</code>, <code>LWS</code></td></tr>
+    <tr><td>Bowling status</td><td>bowls, does not bowl, not listed, unknown</td></tr>
+    <tr><td>Role</td><td>batter, bowler, allrounder (batting / bowling), wicketkeeper-batter</td></tr>
+    <tr><td>Other IDs</td><td>Cricinfo, Cricbuzz, CricketArchive and others, so the data joins to other sources</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>The demo</h2>
+<p>The Cricket Player Profiles demo covers close to 3,900 players across more than a hundred teams, with an overview by team, the mix of bowling styles, a searchable player table, and a review queue that lists the players still missing information, most-capped first.</p>
+
+<h2>Where it stands</h2>
+<p>Most of the well-known names are covered. Almost every player has a batting hand, and most have a bowling style recorded or are marked as non-bowlers. What's left is the long tail.</p>
+<p>The remaining gaps are mostly associate players whose profiles don't exist anywhere online, or exist in one place under a different spelling. No script solves that. It takes someone who knows the player, or a scorecard read carefully. So I go through the review queue by hand, a few players at a time, and once I've entered something it isn't overwritten by the next automatic update.</p>
+
+<h2>Still plenty to do</h2>
+<ul>
+  <li>Close the remaining gaps, team by team, starting with the teams I know best.</li>
+  <li>Playing roles: currently recorded for only about a third of the players.</li>
+  <li>Put it to work where it was always meant to go: matchup analysis, such as left-handers against off-spin, in future pieces on this site.</li>
+</ul>
+<p>If you know a player whose batting hand or bowling style is missing or wrong, especially in associate cricket, I'd like to hear from you. <a href="https://www.linkedin.com/in/get2abhijit/" rel="noopener noreferrer">LinkedIn</a> is the easiest way to reach me.</p>
+
+<h2>Credits</h2>
+<p>Match data and the player register come from Cricsheet (ODC-BY licence). Playing styles come from public player profiles. This is an independent passion project, not affiliated with Cricsheet or any of the other sources, and not intended as a commercial product.</p>
+
+
+        </div>
+      </article>
+      <nav class="article-foot" aria-label="More articles">
+        <a href="index.html">← All articles</a>
+        <a href="what-cricket-analytics-measures.html">Next: What cricket analytics actually measures →</a>
+      </nav>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 cricanalysis.in · Abhijit Deshpande &amp; Aniket Kashikar</span>
+      <nav aria-label="Footer">
+        <a href="../articles/index.html">Articles</a>
+        <a href="../about.html">About</a>
+        <a href="../about.html#method">How we work</a>
+        <a href="https://www.linkedin.com/in/get2abhijit/" rel="noopener noreferrer">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

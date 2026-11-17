@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://get2abhijit.github.io/cricanalysis-website/sitemap.xml

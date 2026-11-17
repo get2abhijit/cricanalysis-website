@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What cricket analytics actually measures — cricanalysis.in</title>
+  <meta name="description" content="Averages and strike rates are the start, not the finish. A plain-language tour of the numbers analysts use, what each one is good for, and where each one misleads.">
+  <link rel="canonical" href="https://get2abhijit.github.io/cricanalysis-website/articles/what-cricket-analytics-measures.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="cricanalysis.in">
+  <meta property="og:title" content="What cricket analytics actually measures">
+  <meta property="og:description" content="Averages and strike rates are the start, not the finish. A plain-language tour of the numbers analysts use, what each one is good for, and where each one misleads.">
+  <meta property="og:url" content="https://get2abhijit.github.io/cricanalysis-website/articles/what-cricket-analytics-measures.html">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#f6f4ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101814" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html" aria-label="cricanalysis.in, home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
+  <circle cx="32" cy="32" r="30" fill="#a8261d"/>
+  <path d="M19 6.5c7 14 7 37 0 51" fill="none" stroke="#f6f4ee" stroke-width="2.2" stroke-dasharray="3.2 2.6" stroke-linecap="round"/>
+  <path d="M45 6.5c-7 14-7 37 0 51" fill="none" stroke="#f6f4ee" stroke-width="2.2" stroke-dasharray="3.2 2.6" stroke-linecap="round"/>
+  <rect x="24.5" y="36" width="4" height="10" rx="1" fill="#f6f4ee"/>
+  <rect x="30" y="29" width="4" height="17" rx="1" fill="#f6f4ee"/>
+  <rect x="35.5" y="21" width="4" height="25" rx="1" fill="#f6f4ee"/>
+</svg>
+<span class="brand-name">cric<span>analysis</span></span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="../index.html">Home</a>
+        <a href="../articles/index.html" aria-current="page">Articles</a>
+        <a href="../about.html">About</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">
+    <div class="wrap">
+      <article>
+        <header class="article-head">
+          <p class="kicker">Explainer</p>
+          <h1>What cricket analytics actually measures</h1>
+          <p class="standfirst">Averages and strike rates are the start, not the finish. A plain-language tour of the numbers analysts use, what each one is good for, and where each one misleads.</p>
+          <div class="byline"><span>By <strong>cricanalysis.in</strong></span><span>17 November 2026</span><span>7 min read</span></div>
+          
+        </header>
+        <div class="prose">
+
+<p><strong>The short version:</strong> every cricket statistic answers one narrow question. The skill is matching the question you care about to the number that actually answers it, and knowing what that number leaves out.</p>
+
+<h2>Two kinds of data</h2>
+<p><strong>Scorecard data</strong> is what most people know: runs, balls, wickets, overs, the way each batter got out. It tells you <em>what</em> happened in a match.</p>
+<p><strong>Ball-by-ball data</strong> records every delivery: who bowled it, who faced it, how many runs came from it, and whether a wicket fell. It tells you <em>when</em> and <em>against whom</em>. That is what lets you split an innings into phases, or ask how a batter scores against a particular bowler. Free sources such as Cricsheet publish ball-by-ball data for many international and league matches.</p>
+<p>Some professional providers add more: where the ball pitched, its speed, where the shot went. That is useful, but it is rarely available for Associate cricket, so this site mostly works with ball-by-ball data.</p>
+
+<h2>The basic measures</h2>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Measure</th><th>How it's worked out</th><th>What it answers</th><th>Watch out for</th></tr></thead>
+  <tbody>
+    <tr><td>Batting average</td><td>runs ÷ times out</td><td>How many runs a batter makes per dismissal</td><td>Not-outs inflate it; says nothing about speed</td></tr>
+    <tr><td>Strike rate (batting)</td><td>runs ÷ balls × 100</td><td>How fast a batter scores</td><td>Depends heavily on when they bat</td></tr>
+    <tr><td>Economy rate</td><td>runs conceded ÷ overs</td><td>How expensive a bowler is</td><td>Death-over bowlers will look worse</td></tr>
+    <tr><td>Bowling average</td><td>runs conceded ÷ wickets</td><td>Runs a bowler pays for each wicket</td><td>Unstable with few wickets</td></tr>
+    <tr><td>Bowling strike rate</td><td>balls ÷ wickets</td><td>How often a bowler takes a wicket</td><td>Same: needs a decent number of wickets</td></tr>
+    <tr><td>Dot-ball %</td><td>balls with no run ÷ balls</td><td>Pressure built (bowler) or absorbed (batter)</td><td>Whether wides and no-balls are counted varies</td></tr>
+    <tr><td>Boundary %</td><td>balls hit for 4 or 6 ÷ balls faced</td><td>How a batter's runs are made</td><td>Ground size matters</td></tr>
+  </tbody>
+</table>
+</div>
+<p>None of these is wrong. Each is a summary, and a summary always throws something away. A batter averaging 35 at a strike rate of 95 and one averaging 25 at 150 can both be valuable in T20 cricket; the average alone would rank them one way and the strike rate the other.</p>
+
+<h2>Context: the phase of the innings</h2>
+<p>In T20 cricket, the same over is played very differently depending on when it comes. Analysts usually split the innings into three phases.</p>
+<figure>
+<svg viewBox="0 0 640 132" role="img" aria-labelledby="ph-t ph-d" style="width:100%">
+  <title id="ph-t">The three phases of a T20 innings</title>
+  <desc id="ph-d">A bar of 20 overs split into powerplay (overs 1 to 6), middle overs (7 to 15) and death overs (16 to 20).</desc>
+  <g font-family="system-ui, sans-serif" font-size="13">
+    <rect x="10" y="30" width="180" height="44" rx="6" fill="#2e5a3c"/>
+    <rect x="194" y="30" width="270" height="44" rx="6" fill="#8aa893"/>
+    <rect x="468" y="30" width="162" height="44" rx="6" fill="#a8261d"/>
+    <text x="100" y="57" text-anchor="middle" fill="#fff" font-weight="600">Powerplay · 1–6</text>
+    <text x="329" y="57" text-anchor="middle" fill="#15211c" font-weight="600">Middle overs · 7–15</text>
+    <text x="549" y="57" text-anchor="middle" fill="#fff" font-weight="600">Death · 16–20</text>
+    <text x="100" y="98" text-anchor="middle" fill="currentColor" opacity=".75">2 fielders outside the circle</text>
+    <text x="329" y="98" text-anchor="middle" fill="currentColor" opacity=".75">rotate, build, use spin</text>
+    <text x="549" y="98" text-anchor="middle" fill="currentColor" opacity=".75">boundaries, yorkers, slower balls</text>
+    <text x="10" y="18" fill="currentColor" opacity=".6" font-size="12">Over 1</text>
+    <text x="630" y="18" fill="currentColor" opacity=".6" font-size="12" text-anchor="end">Over 20</text>
+  </g>
+</svg>
+<figcaption>A common way to split a T20 innings. The powerplay is set by the playing conditions; the 7–15 / 16–20 split is an analyst's convention, and some analysts draw the line elsewhere.</figcaption>
+</figure>
+<p>Once you split by phase, many puzzles go away. A bowler with a high economy rate may simply bowl most of his overs at the death, where every bowler concedes more. A batter with a modest strike rate may bat through the middle overs and give the finishers a platform. Comparing players <em>within</em> the same phase is fairer than comparing their overall numbers.</p>
+
+<h2>Context: the matchup</h2>
+<p>A matchup is a pairing: a type of batter against a type of bowler. Classic questions are how left-handers fare against off-spin, which turns the ball away from them, or how a top order copes with left-arm pace.</p>
+<p>To answer them you need to know, for every ball, the batter's hand and the bowler's style. Ball-by-ball data usually does not carry that. That gap is why we built a <a href="player-profiles.html">player profile register</a> on top of Cricsheet.</p>
+<div class="callout warn"><p class="callout-title">Caution</p><p>Matchup samples shrink fast. A batter may face only a few dozen balls of left-arm spin in an entire international career. Treat a single player's matchup numbers as a hint, and team- or competition-level matchups as more reliable.</p></div>
+
+<h2>Context: the opposition and the conditions</h2>
+<p>Runs against a top-ranked side and runs against a team playing its first international season are not worth the same. Neither are runs on a small ground with a fast outfield and runs on a slow, low pitch. Good analysis either adjusts for this or at least says it out loud.</p>
+<p>This matters even more in Associate cricket, where the gap between the strongest and weakest teams in a tournament can be very wide. We look at that in <a href="small-samples.html">Five innings is not a career</a>.</p>
+
+<h2>From numbers to decisions</h2>
+<p>For a coach or a captain, the value of analysis is in a few clear, usable observations: this batter scores most of his runs square of the wicket, this bowler's slower ball goes for runs, this opponent loses wickets in clusters in the middle overs. More data is rarely the problem. Choosing what matters is.</p>
+<p>That is the approach on this site: start with the question, pick the measure that answers it, show the evidence, and be honest about how much the evidence can bear.</p>
+
+
+        </div>
+      </article>
+      <nav class="article-foot" aria-label="More articles">
+        <a href="index.html">← All articles</a>
+        <a href="cricket-in-germany.html">Next: Cricket in Germany: a short, sourced guide →</a>
+      </nav>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>© 2026 cricanalysis.in · Abhijit Deshpande &amp; Aniket Kashikar</span>
+      <nav aria-label="Footer">
+        <a href="../articles/index.html">Articles</a>
+        <a href="../about.html">About</a>
+        <a href="../about.html#method">How we work</a>
+        <a href="https://www.linkedin.com/in/get2abhijit/" rel="noopener noreferrer">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
