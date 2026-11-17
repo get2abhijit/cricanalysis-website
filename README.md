@@ -2,7 +2,7 @@
 
 Static site for **cricanalysis.in**: evidence-led cricket analysis with a focus on Associate nations and European cricket, by Abhijit Deshpande and Aniket Kashikar.
 
-Live (GitHub Pages, deploy from `main`): https://get2abhijit.github.io/cricanalysis-website/
+Live: https://cricanalysis.in/ (GitHub Pages, deploy from `main`, custom domain via `CNAME`)
 
 Plain HTML and one stylesheet. No build step, no JavaScript, no tracking, no third-party requests. Light and dark mode follow the reader's system setting.
 
@@ -29,11 +29,12 @@ sitemap.xml, robots.txt    For search engines
 
 Preview locally: `python3 -m http.server` in this folder, then open http://localhost:8000.
 
-## Moving to cricanalysis.in (not done yet)
+## Domain
 
-`cricanalysis.in` currently points at the personal site (`get2abhijit/abhijitdeshpande-website`, which has the `CNAME`). To switch without breaking links:
+`cricanalysis.in` is served from this repo (`CNAME`). Canonical URLs, `sitemap.xml` and `robots.txt` use `https://cricanalysis.in/`; `404.html` uses root-absolute paths (`/assets/...`).
 
-1. Decide where the personal site will live (e.g. its github.io address or a new domain) and remove its `CNAME`.
-2. Add a `CNAME` file containing `cricanalysis.in` to this repo and set the custom domain in Settings → Pages.
-3. Change the canonical/og URLs and `sitemap.xml`/`robots.txt` from the github.io address to `https://cricanalysis.in/`, and the 404 page's `/cricanalysis-website/` paths to `/`.
-4. Old personal-site URLs under cricanalysis.in (e.g. `/projects/player-profiles.html`, `/notes/...`) will 404 after the switch. Add small redirect pages at those paths here (a `<meta http-equiv="refresh">` plus a link) pointing either to the new article or to the personal site's new home.
+The domain used to host Abhijit's personal site, which now lives at https://get2abhijit.github.io/abhijitdeshpande-website/. `projects/player-profiles.html` redirects to the article here; the 404 page points other old visitors to the personal site.
+
+## Photos
+
+`assets/images/` holds the analysts' photos (square, about 320 px, metadata removed). Aniket's card shows initials until `aniket-kashikar.jpg` is added and the About page is updated to use it.
